@@ -21,7 +21,7 @@ class ProfileScreen extends StatelessWidget {
 
   final String imagePath = "assets/image/anh1.png";
   final String userName = "Nguyen Thanh Lam";
-  final String location = "Bien Hoa, Dong Nai, Viet Nam   ";
+  final String location = "Bien Hoa, Dong Nai, Viet Nam";
 
   @override
   Widget build(BuildContext context) {
