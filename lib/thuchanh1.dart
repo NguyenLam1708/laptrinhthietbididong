@@ -97,17 +97,17 @@ class _PracticeScreenState extends State<PracticeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Thực Hành 01")),
+
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+
           children: [
             Text(
               "THỰC HÀNH 01",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 90),
             Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
