@@ -5,7 +5,7 @@ import 'login_screen.dart';  // Import trang đăng nhập
 
 class ProfileScreen extends StatelessWidget {
   final UserModel user;
-  final AuthViewModel loginViewModel = AuthViewModel(); // Khởi tạo LoginViewModel
+  final AuthViewModel authViewModel = AuthViewModel(); // Khởi tạo LoginViewModel
 
   ProfileScreen({Key? key, required this.user}) : super(key: key);
 
@@ -22,10 +22,6 @@ class ProfileScreen extends StatelessWidget {
               // Back Button + Title
               Row(
                 children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
-                    onPressed: () => Navigator.pop(context),
-                  ),
                   const Spacer(),
                   const Text(
                     'Profile',
@@ -92,7 +88,7 @@ class ProfileScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () async {
-                    await loginViewModel.signOut();
+                    await authViewModel.signOut();
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => LoginScreen()),

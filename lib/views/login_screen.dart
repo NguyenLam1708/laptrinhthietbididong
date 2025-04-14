@@ -7,7 +7,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AuthViewModel loginViewModel = AuthViewModel(); // Khởi tạo LoginViewModel
+    final AuthViewModel authViewModel = AuthViewModel();
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -53,7 +53,7 @@ class LoginScreen extends StatelessWidget {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                     ),
                     onPressed: () async {
-                      final user = await loginViewModel.signInWithGoogle();
+                      final user = await authViewModel.signInWithGoogle();
                       if (user != null && context.mounted) {
                         Navigator.pushReplacement(
                           context,
