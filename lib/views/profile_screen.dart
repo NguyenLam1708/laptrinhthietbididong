@@ -7,7 +7,7 @@ class ProfileScreen extends StatelessWidget {
   final UserModel user;
   final AuthViewModel authViewModel = AuthViewModel(); // Khởi tạo LoginViewModel
 
-  ProfileScreen({Key? key, required this.user}) : super(key: key);
+  ProfileScreen({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +20,17 @@ class ProfileScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 20),
               // Back Button + Title
-              Row(
+              const Row(
                 children: [
-                  const Spacer(),
-                  const Text(
+                  Spacer(),
+                  Text(
                     'Profile',
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const Spacer(flex: 2),
+                  Spacer(flex: 2),
                 ],
               ),
               const SizedBox(height: 10),
@@ -44,10 +44,10 @@ class ProfileScreen extends StatelessWidget {
                         ? NetworkImage(user.photoUrl)
                         : const AssetImage("assets/images/default_avatar.png") as ImageProvider,
                   ),
-                  CircleAvatar(
+                  const CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 16,
-                    child: const Icon(Icons.camera_alt, size: 18, color: Colors.blue),
+                    child: Icon(Icons.camera_alt, size: 18, color: Colors.blue),
                   ),
                 ],
               ),
@@ -91,7 +91,7 @@ class ProfileScreen extends StatelessWidget {
                     await authViewModel.signOut();
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                      MaterialPageRoute(builder: (context) => const LoginScreen()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
