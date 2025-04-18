@@ -20,17 +20,19 @@ class ProfileScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 20),
               // Back Button + Title
-              const Row(
+              Row(
                 children: [
-                  Spacer(),
-                  Text(
-                    'Profile',
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Center(
+                      child: Text(
+                        'Profile',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
-                  Spacer(flex: 2),
                 ],
               ),
               const SizedBox(height: 10),
